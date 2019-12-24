@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccpPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccp_flagBorderColor="@color/colorAccent"
+            app:ccpDialog_initialScrollToSelection="true"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccpDialog_showFastScroller="false"
+            app:ccpDialog_showFlag="false"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccpDialog_showTitle="false"
+            app:ccpDialog_textColor="#333333"
+            app:ccp_arrowColor="#333333"
+            app:ccp_arrowSize="16dp"
+            app:ccp_clickable="true"
+            app:ccp_contentColor="#333333"
+            app:ccp_showArrow="true"
+            app:ccp_showFlag="true"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="true"
+            app:ccp_textGravity="RIGHT"
+            app:ccp_textSize="14sp"/>
+
+        <View
+            android:id="@+id/viewSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#40000000" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_phone_number"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:textSize="14sp"
+        android:maxLength="13"
+        android:digits="1234567890"
+        android:fontFamily="@font/roboto_regular"
+        app:backgroundTint="#40000000" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#075070"
+        android:padding="6dp"
+        android:text="Enter"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        app:cornerRadius="4dp" />
+
+</LinearLayout>
